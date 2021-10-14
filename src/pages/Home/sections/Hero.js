@@ -5,7 +5,7 @@ import colors from '../../../utils/colors'
 
 const Hero = () => {
   return (
-    <Wrapper>
+    <Wrapper data-scroll-section id="home-hero">
       <Title>{`A Multi-disciplined\nDesigner &\nArt Director`}</Title>
       <LargeText>©1993</LargeText>
     </Wrapper>
@@ -14,7 +14,7 @@ const Hero = () => {
 
 export default Hero
 
-const Wrapper = styled.div`
+const Wrapper = styled.section`
   width: 100%;
   position: relative;
   box-sizing: border-box;

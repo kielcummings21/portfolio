@@ -8,7 +8,7 @@ import LogoSVG from '../images/logo.svg'
 
 const Nav = () => {
   return (
-    <Wrapper>
+    <Wrapper  data-scroll-sticky data-scroll-target="#home-hero">
       <Logo src={LogoSVG} alt="Kiel Cummings"/> 
       <Links>
         <StyledLink to="/about">About</StyledLink>
