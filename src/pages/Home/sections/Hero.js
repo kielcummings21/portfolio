@@ -1,12 +1,25 @@
-import React from 'react'
+import React, { useRef, useEffect } from 'react'
 import styled from 'styled-components'
+import gsap from 'gsap'
 
 import colors from '../../../utils/colors'
 
 const Hero = () => {
+  const titleRef = useRef(null)
+
+  useEffect(() => {
+    if (titleRef.current) {
+      gsap.to(titleRef.current, {
+        delay: 1,
+        duration: 1,
+        color: colors.gray
+      })
+    }
+  }, [titleRef])
+
   return (
     <Wrapper data-scroll-section id="home-hero">
-      <Title>{`A Multi-disciplined\nDesigner &\nArt Director`}</Title>
+      <Title ref={titleRef}>{`A Multi-disciplined\nDesigner &\nArt Director`}</Title>
       <LargeText>©1993</LargeText>
     </Wrapper>
   )
@@ -35,7 +48,8 @@ const Title = styled.h1`
   font-weight: normal;
   line-height: 100%;
   letter-spacing: -0.02em;
-  color: ${colors.gray};
+  -webkit-text-stroke: 1px ${colors.gray};
+  color: transparent;
 
   font-size: 13.889vw;
 `

@@ -1,14 +1,18 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 
 import colors from '../../../utils/colors'
+
+import GrainyPortrait from '../components/GrainyPortrait'
 
 import PortraitPNG from '../../../images/portrait.png'
 
 const About = () => {
   return (
     <Wrapper data-scroll-section>
-      <Portrait src={PortraitPNG} alt="Kiel Cummings"/>
+      <ImgWrapper>
+        <GrainyPortrait img={PortraitPNG}/>
+      </ImgWrapper>
       <SubTitle>About Me</SubTitle>
       <Title>It's pronounced kyle</Title>
       <Text>{`Designer of sorts.\nMenswear enthusiast.\nFull-time Husband.\nWannabe interior designer.\nAfter hours mountain biker.\nMusic curator for fun.\n`}</Text>
@@ -67,9 +71,11 @@ const Text = styled.p`
 
   padding-left: 10.486vw;
   font-size: 4.444vw;
+  margin-bottom: 10.694vw;
 `
 
-const Portrait = styled.img`
+const ImgWrapper = styled.div`
+  position: absolute;
   position: absolute;
   top: 0;
   z-index: 1;
