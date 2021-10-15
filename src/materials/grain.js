@@ -5,17 +5,14 @@ import { Texture } from "three";
 const GrainMaterial = shaderMaterial(
   {
     map: new Texture(),
-    delta: 0,
-  },
-  `
-  varying vec2 vUv;
+  }, `
+    varying vec2 vUv;
 
     void main() {
       gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
       vUv = uv;
     }
-`,
-  `
+  `, `
     uniform sampler2D map;
 
     varying vec2 vUv;
