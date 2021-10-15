@@ -3,16 +3,14 @@ import styled, { keyframes } from 'styled-components'
 
 import colors from '../../../utils/colors'
 
-import GrainyPortrait from '../components/GrainyPortrait'
 
 import PortraitPNG from '../../../images/portrait.png'
 
 const About = () => {
   return (
     <Wrapper data-scroll-section>
-      <ImgWrapper>
-        <GrainyPortrait img={PortraitPNG}/>
-      </ImgWrapper>
+      <Img src={PortraitPNG}/>
+  
       <SubTitle>About Me</SubTitle>
       <Title>It's pronounced kyle</Title>
       <Text>{`Designer of sorts.\nMenswear enthusiast.\nFull-time Husband.\nWannabe interior designer.\nAfter hours mountain biker.\nMusic curator for fun.\n`}</Text>
@@ -74,8 +72,7 @@ const Text = styled.p`
   margin-bottom: 10.694vw;
 `
 
-const ImgWrapper = styled.div`
-  position: absolute;
+const Img = styled.img`
   position: absolute;
   top: 0;
   z-index: 1;
