@@ -12,8 +12,7 @@ const About = () => {
       <Img src={PortraitPNG}/>
   
       <SubTitle>About Me</SubTitle>
-      <Title>It's pronounced kyle</Title>
-      <Text>{`Designer of sorts.\nMenswear enthusiast.\nFull-time Husband.\nWannabe interior designer.\nAfter hours mountain biker.\nMusic curator for fun.\n`}</Text>
+      <Title>{`Designer of sorts.\nMenswear enthusiast.\nFull-time Husband.\nWannabe interior designer.\nAfter hours mountain biker.\nMusic curator for fun.\n`}</Title>
     </Wrapper>
   )
 }
@@ -53,23 +52,10 @@ const Title = styled.h3`
   font-weight: normal;
   line-height: 90%;
   letter-spacing: -0.02em;
+  white-space: pre-wrap;
 
   font-size: 6.667vw;
   margin-bottom: 1.597vw;
-`
-
-const Text = styled.p`
-  color: ${colors.darkGray};
-  font-family: Lazzer TRIAL, sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 100%;
-  letter-spacing: -0.04em;
-  white-space: pre-wrap;
-
-  padding-left: 10.486vw;
-  font-size: 4.444vw;
-  margin-bottom: 10.694vw;
 `
 
 const Img = styled.img`

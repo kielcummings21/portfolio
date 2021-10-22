@@ -1,47 +1,81 @@
-import React from 'react'
+import React, { useRef, useEffect, useState } from 'react'
 import styled from 'styled-components'
+import gsap from 'gsap'
 
 import colors from '../../../utils/colors'
+
+const Project = ({ title, type }) => {
+  const titleRef = useRef(null)
+  const [hoverTl, setHoverTl] = useState(null)
+
+  const handleMouseEnter = () => {
+    if (hoverTl) {
+      hoverTl.play()
+    }
+  }
+
+  const handleMouseLeave = () => {
+    if (hoverTl) {
+      hoverTl.reverse()
+    }
+  }
+
+  useEffect(() => {
+    const tl = gsap.timeline({
+      paused: true
+    })
+
+    tl.fromTo(titleRef.current, {
+      background: 'unset',
+      textStroke: '1px #AFB1B0',
+      textFillColor: 'unset'
+    }, {
+      duration: 1,
+      backgroundImage: 'linear-gradient(to bottom, #DAD9D1, #000000)',
+      '-webkit-background-clip': 'text',
+      'background-clip': 'text',
+      '-webkit-text-fill-color': 'transparent',
+      textStroke: '1px #000000'
+    })
+
+    setHoverTl(tl)
+  }, [])
+
+  return (
+    <ProjectWrapper onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+      <Type>
+        <span>Project Type:&nbsp;</span>
+        <p>{type}</p>
+      </Type>
+      <Title ref={titleRef}>{title}</Title>
+      <HR/>
+    </ProjectWrapper>
+  )
+}
 
 const Projects = () => {
   return (
     <Wrapper data-scroll-section>
 
-      <Project>
-        <Type>
-          <span>Project Type:&nbsp;</span>
-          <p>Art Direction, Branding, UI, UX</p>
-        </Type>
-        <Title>Source7</Title>
-        <HR/>
-      </Project>
+      <Project
+        title="Source7"
+        type="Art Direction, Branding, UI, UX"
+      />
 
-      <Project>
-        <Type>
-          <span>Project Type:&nbsp;</span>
-          <p>Art Direction, Branding</p>
-        </Type>
-        <Title>LeMond Bikes</Title>
-        <HR/>
-      </Project>
+      <Project
+        title="LeMond Bikes"
+        type="Art Direction, Branding"
+      />
 
-      <Project>
-        <Type>
-          <span>Project Type:&nbsp;</span>
-          <p>Art Direction, Branding, UI, UX</p>
-        </Type>
-        <Title>Flyreel</Title>
-        <HR/>
-      </Project>
+      <Project
+        title="Flyreel"
+        type="Art Direction, Branding, UI, UX"
+      />
 
-      <Project>
-        <Type>
-          <span>Project Type:&nbsp;</span>
-          <p>Art Direction, Branding</p>
-        </Type>
-        <Title>Sandbox VR</Title>
-        <HR/>
-      </Project>
+      <Project
+        title="Sandbox VR"
+        type="Art Direction, Branding"
+      />
 
     </Wrapper>
   )
@@ -59,7 +93,7 @@ const Wrapper = styled.section`
   padding-top: 10.417vw;
 `
 
-const Project = styled.div`
+const ProjectWrapper = styled.div`
   box-sizing: border-box;
   width: 100%;
   display: flex;
@@ -79,6 +113,9 @@ const Title = styled.h2`
   line-height: 90%;
   letter-spacing: -0.02em;
   -webkit-text-stroke: 1px #AFB1B0;
+  background: linear-gradient(to bottom, #DAD9D1, #000000);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 
   font-size: 12.5vw;
   margin-bottom: 2.222vw;
