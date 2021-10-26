@@ -34,7 +34,7 @@ const Project = ({ title, type, href }) => {
       textStroke: '1px #AFB1B0',
       textFillColor: 'unset'
     }, {
-      duration: 1,
+      duration: 0.5,
       backgroundImage: 'linear-gradient(to bottom, #DAD9D1, #000000)',
       '-webkit-background-clip': 'text',
       'background-clip': 'text',

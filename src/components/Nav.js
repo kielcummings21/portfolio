@@ -21,7 +21,7 @@ const Nav = () => {
 export default Nav
 
 const Wrapper = styled.header`
-  background-color: ${colors.black};
+  background-color: transparent;
   box-sizing: border-box;
   width: 100%;
   display: flex;
