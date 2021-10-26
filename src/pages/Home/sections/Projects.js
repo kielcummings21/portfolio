@@ -4,7 +4,7 @@ import gsap from 'gsap'
 
 import colors from '../../../utils/colors'
 
-const Project = ({ title, type }) => {
+const Project = ({ title, type, href }) => {
   const titleRef = useRef(null)
   const [hoverTl, setHoverTl] = useState(null)
 
@@ -18,6 +18,10 @@ const Project = ({ title, type }) => {
     if (hoverTl) {
       hoverTl.reverse()
     }
+  }
+
+  const handleOnClick = () => {
+    window.open(href, "_blank")
   }
 
   useEffect(() => {
@@ -42,7 +46,11 @@ const Project = ({ title, type }) => {
   }, [])
 
   return (
-    <ProjectWrapper onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+    <ProjectWrapper 
+      onMouseEnter={handleMouseEnter} 
+      onMouseLeave={handleMouseLeave}
+      onClick={handleOnClick}
+    >
       <Type>
         <span>Project Type:&nbsp;</span>
         <p>{type}</p>
@@ -60,21 +68,25 @@ const Projects = () => {
       <Project
         title="Source7"
         type="Art Direction, Branding, UI, UX"
+        href="https://source7.com"
       />
 
       <Project
         title="LeMond Bikes"
         type="Art Direction, Branding"
+        href="https://lemond.com"
       />
 
       <Project
         title="Flyreel"
         type="Art Direction, Branding, UI, UX"
+        href="https://flyreel.co"
       />
 
       <Project
         title="Sandbox VR"
         type="Art Direction, Branding"
+        href="http://sandboxvr.com"
       />
 
     </Wrapper>
