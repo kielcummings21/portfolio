@@ -5,8 +5,8 @@ const Cursor = () => {
   return (
     <SVG width="174" height="174" viewBox="0 0 174 174" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g filter="url(#filter0_b_407:1413)">
-        <rect width="174" height="174" rx="87" fill="black" fill-opacity="0.3"/>
-        <circle cx="87" cy="87" r="11" fill="#6988F3" fill-opacity="0.98"/>
+        <rect width="174" height="174" rx="87" fill="black" fillOpacity="0.3"/>
+        <circle cx="87" cy="87" r="11" fill="#6988F3" fillOpacity="0.98"/>
         <path d="M77.0902 138.427L72.6267 145.609L73.6572 145.778L77.4053 139.728L79.0052 146.659L80.046 146.83L78.1207 138.597L77.0902 138.427Z" fill="#E5E3DE"/>
         <path d="M71.3434 144.286C70.9814 144.185 70.6496 144.363 70.5483 144.725C70.447 145.087 70.6409 145.402 71.003 145.503C71.365 145.604 71.7041 145.439 71.8054 145.077C71.9067 144.715 71.7055 144.387 71.3434 144.286ZM72.0633 143.457L73.6756 137.695L72.7705 137.441L71.1582 143.204L72.0633 143.457Z" fill="#E5E3DE"/>
         <path d="M65.0336 136.803C65.4484 136.169 66.2141 135.929 67.0122 136.239C68.112 136.667 68.4876 137.833 68.0104 139.06L67.9877 139.118L63.9098 137.531C63.06 139.139 63.6297 140.728 65.1479 141.319C66.6565 141.906 68.1847 141.088 68.8361 139.414C69.4874 137.74 68.8978 136.088 67.3114 135.471C66.1045 135.001 64.8916 135.325 64.1577 136.462L65.0336 136.803ZM65.4087 140.591C64.5522 140.258 64.2425 139.499 64.4709 138.624L67.6145 139.847C67.0595 140.639 66.2067 140.902 65.4087 140.591Z" fill="#E5E3DE"/>
@@ -54,7 +54,7 @@ const Cursor = () => {
         <rect x="0.5" y="0.5" width="173" height="173" rx="86.5" stroke="#E5E3DE"/>
       </g>
       <defs>
-        <filter id="filter0_b_407:1413" x="-10" y="-10" width="194" height="194" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+        <filter id="filter0_b_407:1413" x="-10" y="-10" width="194" height="194" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
           <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_407:1413" result="shape"/>
         </filter>
       </defs>
