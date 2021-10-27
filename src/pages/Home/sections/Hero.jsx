@@ -4,6 +4,8 @@ import gsap from 'gsap'
 
 import colors from '../../../utils/colors'
 
+import HeroText from '../components/HeroText'
+
 const Hero = () => {
   const titleRef = useRef(null)
 
@@ -19,7 +21,7 @@ const Hero = () => {
 
   return (
     <Wrapper data-scroll-section id="home-hero">
-      <Title ref={titleRef}>{`A Multi-disciplined\nDesigner &\nArt Director`}</Title>
+      <Title ref={titleRef}><HeroText/></Title>
       <LargeText>©1993</LargeText>
     </Wrapper>
   )
