@@ -52,6 +52,7 @@ const Title = styled.h1`
   color: transparent;
 
   font-size: 13.889vw;
+  cursor: default;
 `
 
 const LargeText = styled.span`
@@ -65,6 +66,7 @@ const LargeText = styled.span`
   background: linear-gradient(to top, ${colors.black}, #505050);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  cursor: default;
 
   font-size: 41.667vw;
   right: 7.222vw;

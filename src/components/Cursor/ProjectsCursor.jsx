@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const Cursor = () => {
   return (
-    <SVG id="cursor" width="174" height="174" viewBox="0 0 174 174" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <SVG width="174" height="174" viewBox="0 0 174 174" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g filter="url(#filter0_b_407:1413)">
         <rect width="174" height="174" rx="87" fill="black" fill-opacity="0.3"/>
         <circle cx="87" cy="87" r="11" fill="#6988F3" fill-opacity="0.98"/>
@@ -66,9 +66,10 @@ const Cursor = () => {
 export default Cursor
 
 const SVG = styled.svg`
-  position: absolute;
-  z-index: 99;
   backdrop-filter: blur(5px);
   border-radius: 50%;
   pointer-events: none;
+
+  height: auto;
+  width: 12.153vw;
 `

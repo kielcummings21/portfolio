@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
 import gsap from 'gsap'
 
@@ -61,49 +61,7 @@ const Project = ({ title, type, href }) => {
   )
 }
 
-const Projects = () => {
-  return (
-    <Wrapper data-scroll-section>
-
-      <Project
-        title="Source7"
-        type="Art Direction, Branding, UI, UX"
-        href="https://source7.com"
-      />
-
-      <Project
-        title="LeMond Bikes"
-        type="Art Direction, Branding"
-        href="https://lemond.com"
-      />
-
-      <Project
-        title="Flyreel"
-        type="Art Direction, Branding, UI, UX"
-        href="https://flyreel.co"
-      />
-
-      <Project
-        title="Sandbox VR"
-        type="Art Direction, Branding"
-        href="http://sandboxvr.com"
-      />
-
-    </Wrapper>
-  )
-}
-
-export default Projects
-
-const Wrapper = styled.section`
-  display: flex;
-  box-sizing: border-box;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-
-  padding-top: 10.417vw;
-`
+export default Project
 
 const ProjectWrapper = styled.div`
   box-sizing: border-box;
