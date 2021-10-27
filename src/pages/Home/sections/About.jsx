@@ -1,13 +1,29 @@
-import React from 'react'
+import { useContext } from 'react'
 import styled from 'styled-components'
+import { CursorContext } from '../../../App'
 
 import colors from '../../../utils/colors'
 
 import PortraitPNG from '../../../images/portrait.png'
 
 const About = () => {
+
+  const { setCursorType } = useContext(CursorContext)
+
+  const handleMouseEnter = () => {
+    setCursorType('about')
+  }
+
+  const handleMouseLeave = () => {
+    setCursorType(null)
+  }
+
   return (
-    <Wrapper data-scroll-section>
+    <Wrapper 
+      data-scroll-section
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
       <Img src={PortraitPNG}/>
   
       <SubTitle>About Me</SubTitle>
@@ -23,6 +39,7 @@ const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  cursor: none;
 
   padding-top: 7.639vw;
   padding-left: 18.333vw;
