@@ -4,6 +4,8 @@ import gsap from 'gsap'
 
 import colors from '../../../utils/colors'
 
+import HeroText from '../../../components/HeroText'
+
 const Hero = () => {
   const titleRef = useRef(null)
 
@@ -19,7 +21,7 @@ const Hero = () => {
 
   return (
     <Wrapper data-scroll-section id="home-hero">
-      <Title ref={titleRef}>{`A Multi-disciplined\nDesigner &\nArt Director`}</Title>
+      <Title ref={titleRef}><HeroText/></Title>
       <LargeText>©1993</LargeText>
     </Wrapper>
   )
@@ -42,16 +44,6 @@ const Wrapper = styled.section`
 const Title = styled.h1`
   position: relative;
   z-index: 2;
-  white-space: pre-wrap;
-  font-family: Arras, sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 100%;
-  letter-spacing: -0.02em;
-  -webkit-text-stroke: 1px ${colors.gray};
-  color: transparent;
-
-  font-size: 13.889vw;
 `
 
 const LargeText = styled.span`
