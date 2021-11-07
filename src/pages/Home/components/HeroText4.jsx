@@ -212,7 +212,7 @@ const SVG = styled.svg`
   }
 
   path {
-    fill: black;
+    fill: transparent;
     stroke: url(#gradient);
   }
 
