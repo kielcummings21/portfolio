@@ -44,20 +44,6 @@ const Wrapper = styled.section`
 const Title = styled.h1`
   position: relative;
   z-index: 2;
-<<<<<<< HEAD:src/pages/Home/sections/Hero.js
-=======
-  white-space: pre-wrap;
-  font-family: Arras, sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 100%;
-  letter-spacing: -0.02em;
-  -webkit-text-stroke: 1px ${colors.gray};
-  color: transparent;
-
-  font-size: 13.889vw;
-  cursor: default;
->>>>>>> a6454c5825a69d1c0dee1c6d3ad109a52f6779af:src/pages/Home/sections/Hero.jsx
 `
 
 const LargeText = styled.span`
