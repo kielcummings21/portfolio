@@ -4,7 +4,7 @@ import gsap from 'gsap'
 
 import colors from '../../../utils/colors'
 
-import HeroText from '../components/HeroText4'
+import HeroText from '../components/HeroText6'
 
 const Hero = () => {
   const titleRef = useRef(null)
@@ -23,7 +23,7 @@ const Hero = () => {
   useEffect(() => {
     if (dateRef.current) {
       gsap.to(dateRef.current, {
-        delay: 4,
+        delay: 5,
         duration: 1,
         opacity: 1
       })
