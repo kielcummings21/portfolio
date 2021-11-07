@@ -6,48 +6,8 @@ import colors from '../../../utils/colors'
 
 const HeroText = () => {
   const svgRef = useRef(null)
-  const rectRef = useRef(null)
   const animateRef = useRef(null)
   const pathRef = useRef(null)
-
-  const letter0Length = 645.286865234375
-  const letter1Length = 908.647216796875
-  const letter2Length = 539.101318359375
-  const letter3Length = 322
-  const letter4Length = 606.0989990234375
-  const letter5Length = 310.6680908203125
-  const letter6Length = 111.19993591308594
-  const letter7Length = 650.8155517578125
-  const letter8Length = 310.6680908203125
-  const letter9Length = 544.50146484375
-  const letter10Length = 461.04840087890625
-  const letter11Length = 310.6680908203125
-  const letter12Length = 672.4530029296875
-  const letter13Length = 322.00006103515625
-  const letter14Length = 310.6680908203125
-  const letter15Length = 507.4146728515625
-  const letter16Length = 648.1871337890625
-  const letter17Length = 650.8157958984375
-  const letter18Length = 729.0730590820312
-  const letter19Length = 648.18603515625
-  const letter20Length = 544.5038452148438
-  const letter21Length = 310.6681213378906
-  const letter22Length = 807.03955078125
-  const letter23Length = 507.41748046875
-  const letter24Length = 648.1863403320312
-  const letter25Length = 414.9907531738281
-  const letter26Length = 845.0308227539062
-  const letter27Length = 645.2869873046875
-  const letter28Length = 414.9908752441406
-  const letter29Length = 606.099365234375
-  const letter30Length = 729.0740356445312
-  const letter31Length = 310.668212890625
-  const letter32Length = 414.99072265625
-  const letter33Length = 648.186767578125
-  const letter34Length = 461.04852294921875
-  const letter35Length = 606.1030883789062
-  const letter36Length = 594.6600952148438
-  const letter37Length = 414.9907531738281
 
   const [outlineComplete, setOutlineComplete] = useState(false)
 
