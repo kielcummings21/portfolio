@@ -100,7 +100,7 @@ const HeroText = () => {
       duration: 0.5,
       strokeDashoffset: 0,
       fill: 'black',
-      stagger: 0.1
+      stagger: 0.08
     }, 0)
     
 
@@ -114,6 +114,7 @@ const HeroText = () => {
       let paths = svgRef.current.getElementsByTagName('path')
 
       gsap.to(paths, {
+        delay: 1,
         duration: 1,
         fill: colors.gray
       })
