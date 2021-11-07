@@ -1,19 +1,33 @@
-import React from 'react'
+import { useContext } from 'react'
 import styled from 'styled-components'
+import { CursorContext } from '../../../App'
 
 import colors from '../../../utils/colors'
-
 
 import PortraitPNG from '../../../images/portrait.png'
 
 const About = () => {
+
+  const { setCursorType } = useContext(CursorContext)
+
+  const handleMouseEnter = () => {
+    setCursorType('about')
+  }
+
+  const handleMouseLeave = () => {
+    setCursorType(null)
+  }
+
   return (
-    <Wrapper data-scroll-section>
+    <Wrapper 
+      data-scroll-section
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
       <Img src={PortraitPNG}/>
   
       <SubTitle>About Me</SubTitle>
-      <Title>It's pronounced kyle</Title>
-      <Text>{`Designer of sorts.\nMenswear enthusiast.\nFull-time Husband.\nWannabe interior designer.\nAfter hours mountain biker.\nMusic curator for fun.\n`}</Text>
+      <Title>{`Designer of sorts.\nMenswear enthusiast.\nFull-time Husband.\nWannabe interior designer.\nAfter hours mountain biker.\nMusic curator for fun.\n`}</Title>
     </Wrapper>
   )
 }
@@ -25,6 +39,7 @@ const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  cursor: none;
 
   padding-top: 7.639vw;
   padding-left: 18.333vw;
@@ -53,23 +68,10 @@ const Title = styled.h3`
   font-weight: normal;
   line-height: 90%;
   letter-spacing: -0.02em;
+  white-space: pre-wrap;
 
   font-size: 6.667vw;
   margin-bottom: 1.597vw;
-`
-
-const Text = styled.p`
-  color: ${colors.darkGray};
-  font-family: Lazzer TRIAL, sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 100%;
-  letter-spacing: -0.04em;
-  white-space: pre-wrap;
-
-  padding-left: 10.486vw;
-  font-size: 4.444vw;
-  margin-bottom: 10.694vw;
 `
 
 const Img = styled.img`
