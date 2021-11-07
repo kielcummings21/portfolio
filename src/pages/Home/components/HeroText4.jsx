@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
 import gsap from 'gsap'
 
-import colors from '../utils/colors'
+import colors from '../../../utils/colors'
 
 const HeroText = () => {
   const svgRef = useRef(null)
@@ -93,6 +93,7 @@ const HeroText = () => {
       delay: 2,
       onComplete: () => {
         setRow1Complete(true)
+        row2Tl.play()
       }
     })
 
@@ -103,76 +104,77 @@ const HeroText = () => {
     row1Tl.to(letter1.current, {
       duration: 0.5,
       strokeDashoffset: 0
-    }, 0.2)
+    }, 0.1)
     row1Tl.to(letter2.current, {
       duration: 0.5,
       strokeDashoffset: 0
-    }, 0.5)
+    }, 0.2)
     row1Tl.to(letter3.current, {
       duration: 0.5,
       strokeDashoffset: 0
-    }, 0.7)
+    }, 0.3)
     row1Tl.to(letter4.current, {
       duration: 0.5,
       strokeDashoffset: 0
-    }, 0.9)
+    }, 0.4)
     row1Tl.to(letter5.current, {
       duration: 0.5,
       strokeDashoffset: 0
-    }, 1.1)
+    }, 0.5)
     row1Tl.to(letter6.current, {
       duration: 0.5,
       strokeDashoffset: 0
-    }, 1.3)
+    }, 0.6)
     row1Tl.to(letter7.current, {
       duration: 0.5,
       strokeDashoffset: 0
-    }, 1.5)
+    }, 0.7)
     row1Tl.to(letter8.current, {
       duration: 0.5,
       strokeDashoffset: 0
-    }, 1.7)
+    }, 0.8)
     row1Tl.to(letter9.current, {
       duration: 0.5,
       strokeDashoffset: 0
-    }, 1.9)
+    }, 0.9)
     row1Tl.to(letter10.current, {
       duration: 0.5,
       strokeDashoffset: 0
-    }, 2.1)
+    }, 1)
     row1Tl.to(letter11.current, {
       duration: 0.5,
       strokeDashoffset: 0
-    }, 2.3)
+    }, 1.1)
     row1Tl.to(letter12.current, {
       duration: 0.5,
       strokeDashoffset: 0
-    }, 2.5)
+    }, 1.2)
     row1Tl.to(letter13.current, {
       duration: 0.5,
       strokeDashoffset: 0
-    }, 2.7)
+    }, 1.3)
     row1Tl.to(letter14.current, {
       duration: 0.5,
       strokeDashoffset: 0
-    }, 2.9)
+    }, 1.4)
     row1Tl.to(letter15.current, {
       duration: 0.5,
       strokeDashoffset: 0
-    }, 3.1)
+    }, 1.5)
     row1Tl.to(letter16.current, {
       duration: 0.5,
       strokeDashoffset: 0
-    }, 3.3)
+    }, 1.6)
     row1Tl.to(letter17.current, {
       duration: 0.5,
       strokeDashoffset: 0
-    }, 3.5)
+    }, 1.7)
 
     const row2Tl = gsap.timeline({
-      delay: 2,
+      paused: true,
       onComplete: () => {
         setRow2Complete(true)
+        row3Tl.play()
       }
     })
 
@@ -183,38 +185,38 @@ const HeroText = () => {
     row2Tl.to(letter19.current, {
       duration: 0.5,
       strokeDashoffset: 0
-    }, 0.2)
+    }, 0.1)
     row2Tl.to(letter20.current, {
       duration: 0.5,
       strokeDashoffset: 0
-    }, 0.4)
+    }, 0.2)
     row2Tl.to(letter21.current, {
       duration: 0.5,
       strokeDashoffset: 0
-    }, 0.6)
+    }, 0.3)
     row2Tl.to(letter22.current, {
       duration: 0.5,
       strokeDashoffset: 0
-    }, 0.8)
+    }, 0.4)
     row2Tl.to(letter23.current, {
       duration: 0.5,
       strokeDashoffset: 0
-    }, 1)
+    }, 0.5)
     row2Tl.to(letter24.current, {
       duration: 0.5,
       strokeDashoffset: 0
-    }, 1.2)
+    }, 0.6)
     row2Tl.to(letter25.current, {
       duration: 0.5,
       strokeDashoffset: 0
-    }, 1.4)
+    }, 0.7)
     row2Tl.to(letter26.current, {
       duration: 0.5,
       strokeDashoffset: 0
-    }, 2)
+    }, 0.8)
 
     const row3Tl = gsap.timeline({
-      delay: 2,
+      paused: true,
       onComplete: () => {
         setRow3Complete(true)
       }
@@ -227,43 +229,43 @@ const HeroText = () => {
     row3Tl.to(letter28.current, {
       duration: 0.5,
       strokeDashoffset: 0
-    }, 0.2)
+    }, 0.1)
     row3Tl.to(letter29.current, {
       duration: 0.5,
       strokeDashoffset: 0
-    }, 0.4)
+    }, 0.2)
     row3Tl.to(letter30.current, {
       duration: 0.5,
       strokeDashoffset: 0
-    }, 0.6)
+    }, 0.3)
     row3Tl.to(letter31.current, {
       duration: 0.5,
       strokeDashoffset: 0
-    }, 0.8)
+    }, 0.4)
     row3Tl.to(letter32.current, {
       duration: 0.5,
       strokeDashoffset: 0
-    }, 1)
+    }, 0.5)
     row3Tl.to(letter33.current, {
       duration: 0.5,
       strokeDashoffset: 0
-    }, 1.3)
+    }, 0.6)
     row3Tl.to(letter34.current, {
       duration: 0.5,
       strokeDashoffset: 0
-    }, 1.6)
+    }, 0.7)
     row3Tl.to(letter35.current, {
       duration: 0.5,
       strokeDashoffset: 0
-    }, 1.9)
+    }, 0.8)
     row3Tl.to(letter36.current, {
       duration: 0.5,
       strokeDashoffset: 0
-    }, 2.1)
+    }, 0.9)
     row3Tl.to(letter37.current, {
       duration: 0.5,
       strokeDashoffset: 0
-    }, 2.3)
+    }, 1)
 
     return () => {
       row1Tl.kill()
