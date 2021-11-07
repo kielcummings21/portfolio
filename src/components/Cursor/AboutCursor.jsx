@@ -5,7 +5,7 @@ const Cursor = () => {
   return (
     <SVG width="174" height="174" viewBox="0 0 174 174" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g filter="url(#filter0_b_467:2698)">
-        <rect width="174" height="174" rx="87" fill="black" fill-opacity="0.3"/>
+        <rect width="174" height="174" rx="87" fill="black" fillOpacity="0.3"/>
         <circle cx="87" cy="87" r="11" fill="#91F14A"/>
         <path d="M16.6505 72.5983L21.3598 73.6636L22.0149 70.7675L21.4924 70.6493L20.9711 72.9536L16.7844 72.0065L16.6505 72.5983Z" fill="#91F14A"/>
         <path d="M21.9641 66.7588C22.3754 66.9828 22.5613 67.4427 22.4096 67.9498C22.2006 68.6486 21.501 68.9379 20.7217 68.7048L20.6846 68.6937L21.4596 66.1026C20.4268 65.6589 19.4762 66.0888 19.1877 67.0535C18.901 68.0121 19.4804 68.913 20.5441 69.2311C21.6078 69.5493 22.5967 69.1039 22.8982 68.0959C23.1275 67.3291 22.8678 66.5979 22.1305 66.2022L21.9641 66.7588ZM19.649 67.178C19.8118 66.6338 20.2642 66.4053 20.8145 66.5025L20.2171 68.5C19.7012 68.1975 19.4974 67.6851 19.649 67.178Z" fill="#91F14A"/>
@@ -74,7 +74,7 @@ const Cursor = () => {
         <rect x="0.5" y="0.5" width="173" height="173" rx="86.5" stroke="#E5E3DE"/>
       </g>
       <defs>
-        <filter id="filter0_b_467:2698" x="-10" y="-10" width="194" height="194" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+        <filter id="filter0_b_467:2698" x="-10" y="-10" width="194" height="194" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
           <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_467:2698" result="shape"/>
         </filter>
       </defs>

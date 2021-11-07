@@ -4,8 +4,11 @@ import gsap from 'gsap'
 
 import colors from '../../../utils/colors'
 
+import HeroText from '../components/HeroText4'
+
 const Hero = () => {
   const titleRef = useRef(null)
+  const dateRef = useRef(null)
 
   useEffect(() => {
     if (titleRef.current) {
@@ -17,10 +20,20 @@ const Hero = () => {
     }
   }, [titleRef])
 
+  useEffect(() => {
+    if (dateRef.current) {
+      gsap.to(dateRef.current, {
+        delay: 4,
+        duration: 1,
+        opacity: 1
+      })
+    }
+  }, [dateRef])
+
   return (
     <Wrapper data-scroll-section id="home-hero">
-      <Title ref={titleRef}>{`A Multi-disciplined\nDesigner &\nArt Director`}</Title>
-      <LargeText>©1993</LargeText>
+      <Title ref={titleRef}><HeroText/></Title>
+      <LargeText ref={dateRef}>©1993</LargeText>
     </Wrapper>
   )
 }
@@ -42,17 +55,6 @@ const Wrapper = styled.section`
 const Title = styled.h1`
   position: relative;
   z-index: 2;
-  white-space: pre-wrap;
-  font-family: Arras, sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 100%;
-  letter-spacing: -0.02em;
-  -webkit-text-stroke: 1px ${colors.gray};
-  color: transparent;
-
-  font-size: 13.889vw;
-  cursor: default;
 `
 
 const LargeText = styled.span`
@@ -67,6 +69,7 @@ const LargeText = styled.span`
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   cursor: default;
+  opacity: 0;
 
   font-size: 41.667vw;
   right: 7.222vw;
