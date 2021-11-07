@@ -4,7 +4,7 @@ import gsap from 'gsap'
 
 import colors from '../../../utils/colors'
 
-import HeroText from '../../../components/HeroText'
+import HeroText from '../components/HeroText2'
 
 const Hero = () => {
   const titleRef = useRef(null)
@@ -42,6 +42,7 @@ const Wrapper = styled.section`
 `
 
 const Title = styled.h1`
+  // background-color: white;
   position: relative;
   z-index: 2;
 `
