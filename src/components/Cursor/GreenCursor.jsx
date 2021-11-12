@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import gsap from 'gsap'
 
 const GreenCursor = ({cursorType}) => {
-  const viewTextRefLength = 193.53451538085938
+  // const viewTextRefLength = 193.53451538085938
 
   const innerCircleRef = useRef(null)
   const viewTextRef = useRef(null)
