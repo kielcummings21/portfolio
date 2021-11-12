@@ -11,18 +11,24 @@ const Project = ({ title, type, href }) => {
 
   const { setCursorType } = useContext(CursorContext)
 
+  const handleTitleMouseEnter = () => {
+    setCursorType('projects')
+  }
+
+  const handleTitleMouseLeave = () => {
+    setCursorType(null)
+  }
+
   const handleMouseEnter = () => {
     if (hoverTl) {
       hoverTl.play()
     }
-    setCursorType('projects')
   }
 
   const handleMouseLeave = () => {
     if (hoverTl) {
       hoverTl.reverse()
     }
-    setCursorType(null)
   }
 
   const handleOnClick = () => {
@@ -60,7 +66,7 @@ const Project = ({ title, type, href }) => {
         <span>Project Type:&nbsp;</span>
         <p>{type}</p>
       </Type>
-      <Title ref={titleRef}>{title}</Title>
+      <Title onMouseEnter={handleTitleMouseEnter} onMouseLeave={handleTitleMouseLeave} ref={titleRef}>{title}</Title>
       <HR/>
     </ProjectWrapper>
   )

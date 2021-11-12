@@ -18,18 +18,21 @@ const GreenCursor = ({cursorType}) => {
   
       tl.to(innerCircleRef.current, {
         duration: 0.3,
-        r: 26
+        r: 26,
+        ease: "none"
       }, 0)
 
       tl.to(viewTextRef.current, {
-        duration: 1,
-        strokeDashoffset: 0
-      }, 0.3)
+        duration: 0.5,
+        strokeDashoffset: 0,
+        ease: "none"
+      }, 0.2)
 
       tl.to(viewTextRef.current, {
-        duration: 1,
-        fill: 'black'
-      }, 0.3)
+        duration: 0.5,
+        fill: 'black',
+        ease: "none"
+      }, 0)
   
       setTl(tl)
   
