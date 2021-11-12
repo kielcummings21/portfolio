@@ -73,7 +73,7 @@ const LargeText = styled.span`
   background: linear-gradient(to top, ${colors.black}, #505050);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  cursor: default;
+  cursor: none;
   opacity: 0;
 
   font-size: 41.667vw;

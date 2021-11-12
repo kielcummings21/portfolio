@@ -4,6 +4,7 @@ import { CursorContext } from '../../App'
 
 import ProjectsCursor from './ProjectsCursor'
 import AboutCursor from './AboutCursor'
+import GreenCursor from './GreenCursor'
 
 const Cursor = () => {
 
@@ -11,8 +12,9 @@ const Cursor = () => {
 
   return (
     <Wrapper id="cursor">
-      {cursorType === "projects" && <ProjectsCursor/>}
-      {cursorType === "about" && <AboutCursor/>}
+      {/* {cursorType === "projects" && <ProjectsCursor/>}
+      {cursorType === "about" && <AboutCursor/>} */}
+      <GreenCursor cursorType={cursorType}/>
     </Wrapper>
   )
 }

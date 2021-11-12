@@ -1,4 +1,5 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState, useContext } from 'react'
+import { CursorContext } from '../../../App'
 import styled from 'styled-components'
 import gsap from 'gsap'
 
@@ -8,16 +9,20 @@ const Project = ({ title, type, href }) => {
   const titleRef = useRef(null)
   const [hoverTl, setHoverTl] = useState(null)
 
+  const { setCursorType } = useContext(CursorContext)
+
   const handleMouseEnter = () => {
     if (hoverTl) {
       hoverTl.play()
     }
+    setCursorType('projects')
   }
 
   const handleMouseLeave = () => {
     if (hoverTl) {
       hoverTl.reverse()
     }
+    setCursorType(null)
   }
 
   const handleOnClick = () => {

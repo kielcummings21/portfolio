@@ -1,25 +1,12 @@
-import { useContext } from 'react'
 import styled from 'styled-components'
-import { CursorContext } from '../../../App'
 
 import Project from '../components/Project'
 
 const Projects = () => {
-  const { setCursorType } = useContext(CursorContext)
-
-  const handleMouseEnter = () => {
-    setCursorType('projects')
-  }
-
-  const handleMouseLeave = () => {
-    setCursorType(null)
-  }
-
+  
   return (
     <Wrapper 
       data-scroll-section 
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
     >
 
       <Project
@@ -59,7 +46,6 @@ const Wrapper = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  cursor: none;
 
   padding-top: 10.417vw;
 `

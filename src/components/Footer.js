@@ -95,7 +95,6 @@ const A = styled.a`
   font-size: 1.667vw;
   line-height: 100%;
   letter-spacing: -0.04em;
-  cursor: pointer;
   text-decoration: none;
 
   color: #AFB1B0;
