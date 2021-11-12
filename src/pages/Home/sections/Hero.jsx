@@ -4,6 +4,8 @@ import gsap from 'gsap'
 
 import colors from '../../../utils/colors'
 
+// import HeroText from '../components/HeroText'
+// import HeroText from '../components/HeroText3'
 import HeroText from '../components/HeroText4'
 
 const Hero = () => {
