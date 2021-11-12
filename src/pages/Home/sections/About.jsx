@@ -11,7 +11,7 @@ const About = () => {
   const { setCursorType } = useContext(CursorContext)
 
   const handleMouseEnter = () => {
-    setCursorType('about')
+    setCursorType(null)
   }
 
   const handleMouseLeave = () => {

@@ -49,27 +49,27 @@ const GreenCursor = ({cursorType}) => {
   return (
     <Wrapper>
       <SVG width="126" height="126" viewBox="0 0 126 126" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="63" cy="63" r="63" fill="url(#paint0_radial_17_2731)" fill-opacity="0.1"/>
+        <circle cx="63" cy="63" r="63" fill="url(#paint0_radial_17_2731)" fillOpacity="0.1"/>
         <circle ref={innerCircleRef} cx="63" cy="63" r="12" fill="#91F14A"/>
 
         <defs>
           <radialGradient id="paint0_radial_17_2731" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(63 63) rotate(90) scale(63)">
-            <stop stop-color="#91F14A"/>
-            <stop offset="0.11525" stop-color="#91F14A" stop-opacity="0.991615"/>
-            <stop offset="0.204008" stop-color="#91F14A" stop-opacity="0.967585"/>
-            <stop offset="0.270787" stop-color="#91F14A" stop-opacity="0.9296"/>
-            <stop offset="0.320097" stop-color="#91F14A" stop-opacity="0.879348"/>
-            <stop offset="0.356451" stop-color="#91F14A" stop-opacity="0.818519"/>
-            <stop offset="0.38436" stop-color="#91F14A" stop-opacity="0.7488"/>
-            <stop offset="0.408337" stop-color="#91F14A" stop-opacity="0.671881"/>
-            <stop offset="0.432893" stop-color="#91F14A" stop-opacity="0.589452"/>
-            <stop offset="0.462541" stop-color="#91F14A" stop-opacity="0.5032"/>
-            <stop offset="0.501791" stop-color="#91F14A" stop-opacity="0.414815"/>
-            <stop offset="0.555156" stop-color="#91F14A" stop-opacity="0.325985"/>
-            <stop offset="0.627147" stop-color="#91F14A" stop-opacity="0.2384"/>
-            <stop offset="0.722277" stop-color="#91F14A" stop-opacity="0.153748"/>
-            <stop offset="0.845058" stop-color="#91F14A" stop-opacity="0.0737185"/>
-            <stop offset="1" stop-color="#91F14A" stop-opacity="0"/>
+            <stop stopColor="#91F14A"/>
+            <stop offset="0.11525" stopColor="#91F14A" stopOpacity="0.991615"/>
+            <stop offset="0.204008" stopColor="#91F14A" stopOpacity="0.967585"/>
+            <stop offset="0.270787" stopColor="#91F14A" stopOpacity="0.9296"/>
+            <stop offset="0.320097" stopColor="#91F14A" stopOpacity="0.879348"/>
+            <stop offset="0.356451" stopColor="#91F14A" stopOpacity="0.818519"/>
+            <stop offset="0.38436" stopColor="#91F14A" stopOpacity="0.7488"/>
+            <stop offset="0.408337" stopColor="#91F14A" stopOpacity="0.671881"/>
+            <stop offset="0.432893" stopColor="#91F14A" stopOpacity="0.589452"/>
+            <stop offset="0.462541" stopColor="#91F14A" stopOpacity="0.5032"/>
+            <stop offset="0.501791" stopColor="#91F14A" stopOpacity="0.414815"/>
+            <stop offset="0.555156" stopColor="#91F14A" stopOpacity="0.325985"/>
+            <stop offset="0.627147" stopColor="#91F14A" stopOpacity="0.2384"/>
+            <stop offset="0.722277" stopColor="#91F14A" stopOpacity="0.153748"/>
+            <stop offset="0.845058" stopColor="#91F14A" stopOpacity="0.0737185"/>
+            <stop offset="1" stopColor="#91F14A" stopOpacity="0"/>
           </radialGradient>
         </defs>
       </SVG>

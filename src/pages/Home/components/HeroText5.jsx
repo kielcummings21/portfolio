@@ -14,8 +14,6 @@ const HeroText = () => {
   useEffect(() => {
     let paths = svgRef.current.getElementsByTagName('path')
 
-    console.log(paths[0].getTotalLength())
-
     const row1Tl = gsap.timeline({
       delay: 1,
       onComplete: () => {
