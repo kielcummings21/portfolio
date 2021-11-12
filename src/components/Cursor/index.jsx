@@ -2,8 +2,8 @@ import { useContext } from 'react'
 import styled from 'styled-components'
 import { CursorContext } from '../../App'
 
-import ProjectsCursor from './ProjectsCursor'
-import AboutCursor from './AboutCursor'
+// import ProjectsCursor from './ProjectsCursor'
+// import AboutCursor from './AboutCursor'
 import GreenCursor from './GreenCursor'
 
 const Cursor = () => {

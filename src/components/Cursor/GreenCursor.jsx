@@ -40,12 +40,12 @@ const GreenCursor = ({cursorType}) => {
   }, [innerCircleRef])
 
   useEffect(() => {
-    if (cursorType) {
+    if (cursorType && tl) {
       tl.play()
     } else {
       tl.reverse()
     }
-  }, [cursorType])
+  }, [cursorType, tl])
 
   return (
     <Wrapper>
