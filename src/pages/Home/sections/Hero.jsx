@@ -27,9 +27,9 @@ const Hero = () => {
   useEffect(() => {
     if (dateRef.current) {
       gsap.to(dateRef.current, {
-        delay: 5,
+        delay: 4.5,
         duration: 1,
-        opacity: 1
+        opacity: 1,
       })
     }
   }, [dateRef])

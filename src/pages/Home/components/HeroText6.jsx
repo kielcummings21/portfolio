@@ -7,6 +7,7 @@ import colors from '../../../utils/colors'
 const HeroText = () => {
   const svgRef = useRef(null)
   const animateRef = useRef(null)
+  const animate2Ref = useRef(null)
   const pathRef = useRef(null)
 
   const [outlineComplete, setOutlineComplete] = useState(false)
@@ -17,7 +18,7 @@ const HeroText = () => {
     console.log(paths[0].getTotalLength())
 
     const row1Tl = gsap.timeline({
-      delay: 1,
+    
       onComplete: () => {
         setOutlineComplete(true)
       }
@@ -39,17 +40,19 @@ const HeroText = () => {
     if (outlineComplete) {
    
       animateRef.current.beginElement()
+      animate2Ref.current.beginElement()
       const tl = gsap.timeline({
-        delay: 1.5
+        delay: 2
       })
       tl.to(pathRef.current, {
         duration: 1,
         fill: colors.gray,
+        ease: "circ.in"
         // stroke: colors.gray
-      })
+      }, 0)
       tl.set(pathRef.current, {
         stroke: colors.gray
-      })
+      }, 0)
     }
   }, [outlineComplete])
 
@@ -99,12 +102,34 @@ const HeroText = () => {
 
       <defs>
       
-        <linearGradient id="gradient" x2="0%" y2="0%">
-          <stop offset="0%" stopColor={colors.gray}/>
+        <linearGradient id="gradient" x2="0%" y1="-600%" y2="0%">
+          <stop offset="10%" stopColor={colors.gray}/>
           <stop offset="33%" stopColor={colors.green}/>
-          <stop offset="66%" stopColor={colors.gray}/>
+          <stop offset="75%" stopColor={colors.gray}/>
           <stop offset="100%" stopColor="black"/>
-          <animate ref={animateRef} attributeName="y2" dur="3s" values="0%; 1000%" repeatCount="1" begin="indefinite"/>
+          <animate 
+            ref={animateRef} 
+            attributeName="y2" 
+            dur="3s" 
+            repeatCount="1" 
+            calcMode="spline"
+            begin="indefinite"
+            values="0%; 600%" 
+            keyTimes="0; 1"
+            keySplines="0.86 0.01 0.13 1"
+          />
+          <animate 
+            ref={animate2Ref} 
+            attributeName="y1" 
+            dur="3s" 
+            repeatCount="1" 
+            calcMode="spline"
+            begin="indefinite"
+            values="-600%; 0%" 
+            keyTimes="0; 1"
+            keySplines="0.86 0.01 0.13 1"
+          />
+         
         </linearGradient>
 
       </defs>
