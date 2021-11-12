@@ -4,10 +4,13 @@ import gsap from 'gsap'
 
 import colors from '../../../utils/colors'
 
-import HeroText from '../components/HeroText3'
+// import HeroText from '../components/HeroText'
+// import HeroText from '../components/HeroText3'
+import HeroText from '../components/HeroText4'
 
 const Hero = () => {
   const titleRef = useRef(null)
+  const dateRef = useRef(null)
 
   useEffect(() => {
     if (titleRef.current) {
@@ -19,10 +22,20 @@ const Hero = () => {
     }
   }, [titleRef])
 
+  useEffect(() => {
+    if (dateRef.current) {
+      gsap.to(dateRef.current, {
+        delay: 4,
+        duration: 1,
+        opacity: 1
+      })
+    }
+  }, [dateRef])
+
   return (
     <Wrapper data-scroll-section id="home-hero">
       <Title ref={titleRef}><HeroText/></Title>
-      <LargeText>©1993</LargeText>
+      <LargeText ref={dateRef}>©1993</LargeText>
     </Wrapper>
   )
 }
@@ -58,6 +71,7 @@ const LargeText = styled.span`
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   cursor: default;
+  opacity: 0;
 
   font-size: 41.667vw;
   right: 7.222vw;
