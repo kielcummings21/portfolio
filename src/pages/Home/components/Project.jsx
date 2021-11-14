@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState, useContext } from 'react'
+import { useHistory } from 'react-router-dom'
 import { CursorContext } from '../../../App'
 import styled from 'styled-components'
 import gsap from 'gsap'
@@ -6,6 +7,8 @@ import gsap from 'gsap'
 import colors from '../../../utils/colors'
 
 const Project = ({ title, type, href }) => {
+  const history = useHistory()
+
   const titleRef = useRef(null)
   const [hoverTl, setHoverTl] = useState(null)
 
@@ -32,7 +35,7 @@ const Project = ({ title, type, href }) => {
   }
 
   const handleOnClick = () => {
-    window.open(href, "_blank")
+    history.push(href)
   }
 
   useEffect(() => {

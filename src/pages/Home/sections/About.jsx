@@ -40,6 +40,7 @@ const Wrapper = styled.section`
   flex-direction: column;
   align-items: flex-start;
 
+  margin-bottom: 6.944vw;
   padding-top: 7.639vw;
   padding-left: 18.333vw;
 `

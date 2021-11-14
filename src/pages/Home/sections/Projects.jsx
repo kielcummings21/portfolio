@@ -12,7 +12,7 @@ const Projects = () => {
       <Project
         title="Source7"
         type="Art Direction, Branding, UI, UX"
-        href="https://source7.com"
+        href="/source7"
       />
 
       <Project

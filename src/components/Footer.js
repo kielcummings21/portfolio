@@ -47,11 +47,16 @@ const Footer = () => {
 export default Footer
 
 const Wrapper = styled.footer`
+  position: relative;
+
+  height: 17.639vw;
   padding-left: 1.806vw;
   padding-right: 1.806vw;
 `
 
 const LargeName = styled.span`
+  position: absolute;
+  bottom: 0;
   font-family: Arras;
   font-style: normal;
   font-weight: normal;

@@ -8,6 +8,7 @@ import colors from './utils/colors'
 import Scroll from './components/Scroll'
 import Cursor from './components/Cursor'
 import Home from './pages/Home'
+import Project from './pages/Project'
 
 export const CursorContext = createContext()
 
@@ -49,6 +50,16 @@ function App() {
 
           <Route exact path="/">
             <Home/>
+          </Route>
+
+          <Route path="/source7">
+            <Project
+              title="Source7"
+              type="Art Direction, Branding, UI, UX"
+              description="Source7, we are not just driven by a shared set of values and principles but real, tangible attributes that drive how we work together and how we show up for our customers and partners."
+              image1=""
+              image2=""
+            />
           </Route>
 
         </Switch>
