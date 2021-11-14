@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 
-import colors from '../utils/colors'
+// import colors from '../utils/colors'
 
 import LogoSVG from '../images/logo.svg'
 
@@ -48,17 +48,17 @@ const Links = styled.div`
   justify-content: flex-end;
 `
 
-const StyledLink = styled(Link)`
-  text-decoration: none;
-  cursor: none;
-  font-family: Lazzer TRIAL, sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 90%;  
-  text-align: right;
-  letter-spacing: -0.01em;
-  color: ${colors.lightGray};
+// const StyledLink = styled(Link)`
+//   text-decoration: none;
+//   cursor: none;
+//   font-family: Lazzer TRIAL, sans-serif;
+//   font-style: normal;
+//   font-weight: normal;
+//   line-height: 90%;  
+//   text-align: right;
+//   letter-spacing: -0.01em;
+//   color: ${colors.lightGray};
   
-  font-size: 1.667vw;
-  margin-left: 4.167vw;
-`
+//   font-size: 1.667vw;
+//   margin-left: 4.167vw;
+// `
