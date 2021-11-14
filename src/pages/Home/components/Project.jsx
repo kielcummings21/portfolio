@@ -1,4 +1,5 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState, useContext } from 'react'
+import { CursorContext } from '../../../App'
 import styled from 'styled-components'
 import gsap from 'gsap'
 
@@ -7,6 +8,16 @@ import colors from '../../../utils/colors'
 const Project = ({ title, type, href }) => {
   const titleRef = useRef(null)
   const [hoverTl, setHoverTl] = useState(null)
+
+  const { setCursorType } = useContext(CursorContext)
+
+  const handleTitleMouseEnter = () => {
+    setCursorType('projects')
+  }
+
+  const handleTitleMouseLeave = () => {
+    setCursorType(null)
+  }
 
   const handleMouseEnter = () => {
     if (hoverTl) {
@@ -55,7 +66,7 @@ const Project = ({ title, type, href }) => {
         <span>Project Type:&nbsp;</span>
         <p>{type}</p>
       </Type>
-      <Title ref={titleRef}>{title}</Title>
+      <Title onMouseEnter={handleTitleMouseEnter} onMouseLeave={handleTitleMouseLeave} ref={titleRef}>{title}</Title>
       <HR/>
     </ProjectWrapper>
   )

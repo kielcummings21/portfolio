@@ -11,8 +11,8 @@ const Nav = () => {
     <Wrapper  data-scroll-sticky data-scroll-target="#home-hero">
       <Logo src={LogoSVG} alt="Kiel Cummings"/> 
       <Links>
-        <StyledLink to="/about">About</StyledLink>
-        <StyledLink to="/work">Work</StyledLink>
+        {/* <StyledLink to="/about">About</StyledLink>
+        <StyledLink to="/work">Work</StyledLink> */}
       </Links>
     </Wrapper>
   )
@@ -50,7 +50,7 @@ const Links = styled.div`
 
 const StyledLink = styled(Link)`
   text-decoration: none;
-  cursor: pointer;
+  cursor: none;
   font-family: Lazzer TRIAL, sans-serif;
   font-style: normal;
   font-weight: normal;

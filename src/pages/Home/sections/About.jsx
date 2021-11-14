@@ -11,7 +11,7 @@ const About = () => {
   const { setCursorType } = useContext(CursorContext)
 
   const handleMouseEnter = () => {
-    setCursorType('about')
+    setCursorType(null)
   }
 
   const handleMouseLeave = () => {
@@ -39,7 +39,6 @@ const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  cursor: none;
 
   padding-top: 7.639vw;
   padding-left: 18.333vw;

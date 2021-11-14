@@ -19,8 +19,8 @@ function App() {
     const cursor = document.getElementById('cursor')
 
     gsap.set(cursor, {
-      x: e.clientX - (window.innerWidth * 0.05),
-      y: e.clientY - (window.innerWidth * 0.05)
+      x: e.clientX - (window.innerWidth * 0.06),
+      y: e.clientY - (window.innerWidth * 0.06)
     })
   }
 
@@ -64,4 +64,5 @@ const Wrapper = styled.div`
   position: relative;
   width: 100%;
   background-color: ${colors.black};
+  cursor: none;
 `
