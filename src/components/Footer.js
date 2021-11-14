@@ -96,6 +96,7 @@ const A = styled.a`
   line-height: 100%;
   letter-spacing: -0.04em;
   text-decoration: none;
+  cursor: none;
 
   color: #AFB1B0;
 `

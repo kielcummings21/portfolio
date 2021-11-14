@@ -23,7 +23,7 @@ export default Cursor
 
 const Wrapper = styled.div`
   position: absolute;
-  z-index: 9;
+  z-index: 99;
   pointer-events: none;
-
+  // mix-blend-mode: difference;
 `
