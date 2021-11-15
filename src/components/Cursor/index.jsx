@@ -25,5 +25,5 @@ const Wrapper = styled.div`
   position: absolute;
   z-index: 99;
   pointer-events: none;
-  // mix-blend-mode: difference;
+  mix-blend-mode: difference;
 `
