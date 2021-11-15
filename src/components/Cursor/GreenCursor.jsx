@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
 import gsap from 'gsap'
 
-const GreenCursor = ({cursorType}) => {
+const GreenCursor = ({cursorType, width}) => {
   // const viewTextRefLength = 193.53451538085938
 
   const innerCircleRef = useRef(null)
@@ -28,8 +28,6 @@ const GreenCursor = ({cursorType}) => {
         ease: "none"
       }, 0.2)
 
-      
-  
       setTl(tl)
   
       return () => {
@@ -47,9 +45,9 @@ const GreenCursor = ({cursorType}) => {
   }, [cursorType, tl])
 
   return (
-    <Wrapper>
-      <SVG width="126" height="126" viewBox="0 0 126 126" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="63" cy="63" r="63" fill="url(#paint0_radial_17_2731)" fillOpacity="0.1"/>
+    <Wrapper className="cursor">
+      <SVG width={width} viewBox="0 0 126 126" fill="none" xmlns="http://www.w3.org/2000/svg">
+        {/* <circle cx="63" cy="63" r="63" fill="url(#paint0_radial_17_2731)" fillOpacity="0.1"/> */}
         <circle ref={innerCircleRef} cx="63" cy="63" r="12" fill="#91F14A"/>
 
         <defs>
@@ -83,10 +81,12 @@ const GreenCursor = ({cursorType}) => {
 export default GreenCursor
 
 const Wrapper = styled.div`
-  position: relative;
+  position: absolute;
+  z-index: 99;
   display: flex;
   align-items: center;
   justify-content: center;
+  mix-blend-mode: difference;
 `
 
 const SVG = styled.svg`
@@ -95,7 +95,7 @@ const SVG = styled.svg`
   pointer-events: none;
 
   height: auto;
-  width: 12.153vw;
+  width: ${props => props.width};
 `
 
 const TextSVG = styled.svg`

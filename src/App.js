@@ -15,25 +15,7 @@ function App() {
   const wrapperRef = useRef(null)
   const [cursorType, setCursorType] = useState(null)
 
-  const mouseMoveHandler = (e) => {
-    const cursor = document.getElementById('cursor')
-
-    gsap.set(cursor, {
-      x: e.clientX - (window.innerWidth * 0.06),
-      y: e.clientY - (window.innerWidth * 0.06)
-    })
-  }
-
-  useEffect(() => {
-    if (wrapperRef.current) {
-      const wrapper = wrapperRef.current
-      wrapper.addEventListener("mousemove", mouseMoveHandler)
-
-      return () => {
-        wrapper.removeEventListener("mousemove", mouseMoveHandler)
-      }
-    }
-  }, [wrapperRef])
+ 
 
   return (
     <CursorContext.Provider value={{cursorType, setCursorType}}>
@@ -43,7 +25,9 @@ function App() {
         ref={wrapperRef}
       >
         <Scroll/>
+
         <Cursor/>
+      
         
         <Switch>
 
