@@ -43,6 +43,7 @@ const Cursor = () => {
       <GreenCursor cursorType={cursorType} width={"160px"}/>
       <GreenCursor cursorType={cursorType} width={"140px"}/>
       <GreenCursor cursorType={cursorType} width={"120px"}/>
+      <GreenCursor cursorType={cursorType} width={"100px"}/>
     </Wrapper>
   )
 }
@@ -53,4 +54,5 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  pointer-events: none;
 `
