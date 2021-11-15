@@ -1,7 +1,6 @@
-import React, { useEffect, useRef, useState, createContext } from 'react'
+import React, { useRef, useState, createContext } from 'react'
 import { Switch, Route } from 'react-router-dom'
 import styled from 'styled-components'
-import gsap from 'gsap'
 
 import colors from './utils/colors'
 
