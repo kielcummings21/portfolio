@@ -32,7 +32,9 @@ const Scroll = () => {
     });
     locomotiveScroll.update();
     // Exposing to the global scope for ease of use.
+    console.log('here')
     window.locomotiveScroll = locomotiveScroll;
+    console.log(window.locomotiveScroll)
     locomotiveScroll.on("scroll", ScrollTrigger.update);
     locomotiveScroll.on("call", (name, dir) => {
       const event = new Event(name+"-"+dir)

@@ -1,4 +1,5 @@
 import React from 'react'
+import { useHistory } from 'react-router-dom'
 import styled from 'styled-components'
 // import { Link } from 'react-router-dom'
 
@@ -7,9 +8,15 @@ import styled from 'styled-components'
 import LogoSVG from '../images/logo.svg'
 
 const Nav = () => {
+  const history = useHistory()
+
+  const handleLogoClick = () => {
+    history.push('/')
+  }
+
   return (
     <Wrapper  data-scroll-sticky data-scroll-target="#home-hero">
-      <Logo src={LogoSVG} alt="Kiel Cummings"/> 
+      <Logo src={LogoSVG} alt="Kiel Cummings" onClick={handleLogoClick}/> 
       <Links>
         {/* <StyledLink to="/about">About</StyledLink>
         <StyledLink to="/work">Work</StyledLink> */}
