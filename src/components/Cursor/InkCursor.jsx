@@ -21,27 +21,30 @@ const InkCursor = ({ amount = 20, width = 26 }) => {
       })
 
       console.log(dots.current[0].element)
-  
+      
+      dots.current.forEach((dot, index) => {
+        tl.fromTo(dot.element, {
+          width: '26px',
+          height: '26px',
+          ease: "circ.out"
+        }, {
+          duration: 0.3,
+          width: '52px',
+          height: '52px',
+          ease: "circ.in"
+        }, 0)
+      })
+
       tl.fromTo(dots.current[0].element, {
-        width: '26px',
-        height: '26px',
         text: '',
         zIndex: 1,
         ease: "circ.out"
       }, {
         duration: 0.3,
-        width: '52px',
-        height: '52px',
         text: 'view',
         zIndex: 9,
         ease: "circ.in"
       }, 0)
-  
-      // tl.to(viewTextRef.current, {
-      //   duration: 0.3,
-      //   opacity: 1,
-      //   ease: "none"
-      // }, 0.2)
   
       setTl(tl)
   

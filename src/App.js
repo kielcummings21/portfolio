@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import colors from './utils/colors'
 
 import Scroll from './components/Scroll'
-import Cursor from './components/Cursor'
+// import Cursor from './components/Cursor'
 import InkCursor from './components/Cursor/InkCursor'
 import Home from './pages/Home'
 
