@@ -6,6 +6,7 @@ import colors from './utils/colors'
 
 import Scroll from './components/Scroll'
 import Cursor from './components/Cursor'
+import InkCursor from './components/Cursor/InkCursor'
 import Home from './pages/Home'
 
 export const CursorContext = createContext()
@@ -25,7 +26,8 @@ function App() {
       >
         <Scroll/>
 
-        <Cursor/>
+        {/* <Cursor/> */}
+        <InkCursor/>
       
         
         <Switch>
