@@ -1,12 +1,12 @@
-import React, { useEffect, useRef, useState, createContext } from 'react'
+import React, { useRef, useState, createContext } from 'react'
 import { Switch, Route } from 'react-router-dom'
 import styled from 'styled-components'
-import gsap from 'gsap'
 
 import colors from './utils/colors'
 
 import Scroll from './components/Scroll'
-import Cursor from './components/Cursor'
+// import Cursor from './components/Cursor'
+import InkCursor from './components/Cursor/InkCursor'
 import Home from './pages/Home'
 
 export const CursorContext = createContext()
@@ -15,25 +15,7 @@ function App() {
   const wrapperRef = useRef(null)
   const [cursorType, setCursorType] = useState(null)
 
-  const mouseMoveHandler = (e) => {
-    const cursor = document.getElementById('cursor')
-
-    gsap.set(cursor, {
-      x: e.clientX - (window.innerWidth * 0.06),
-      y: e.clientY - (window.innerWidth * 0.06)
-    })
-  }
-
-  useEffect(() => {
-    if (wrapperRef.current) {
-      const wrapper = wrapperRef.current
-      wrapper.addEventListener("mousemove", mouseMoveHandler)
-
-      return () => {
-        wrapper.removeEventListener("mousemove", mouseMoveHandler)
-      }
-    }
-  }, [wrapperRef])
+ 
 
   return (
     <CursorContext.Provider value={{cursorType, setCursorType}}>
@@ -43,7 +25,10 @@ function App() {
         ref={wrapperRef}
       >
         <Scroll/>
-        <Cursor/>
+
+        {/* <Cursor/> */}
+        <InkCursor/>
+      
         
         <Switch>
 
