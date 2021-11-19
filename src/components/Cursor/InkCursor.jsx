@@ -15,6 +15,10 @@ const InkCursor = ({ amount = 20, width = 26 }) => {
   const [tl, setTl] = useState(gsap.timeline())
 
   useEffect(() => {
+    console.info(`ink cursor: https://codepen.io/mendieta/pen/WgvENJ`)
+  }, [])
+
+  useEffect(() => {
     if (dots.current.length) {
       const tl = gsap.timeline({
         paused: true
