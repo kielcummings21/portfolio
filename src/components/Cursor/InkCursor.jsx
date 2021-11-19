@@ -29,8 +29,8 @@ const InkCursor = ({ amount = 20, width = 26 }) => {
           ease: "circ.out"
         }, {
           duration: 0.3,
-          width: '52px',
-          height: '52px',
+          width: '68px',
+          height: '68px',
           ease: "circ.in"
         }, 0)
       })
@@ -208,7 +208,6 @@ const InkCursor = ({ amount = 20, width = 26 }) => {
         </defs>
       </SVG>
       <Wrapper ref={cursor}>
-        <p>hello</p>
       </Wrapper>
     </>
   )
@@ -244,14 +243,14 @@ const Wrapper = styled.div`
     align-items: center;
     width: 26px;
     height: 26px;
-    border-radius: 20px;
+    border-radius: 50%;
     background-color: ${colors.green};
     transform-origin: center center;
     transform: translate(-50%, -50%);
     font-family: Arras;
     font-style: normal;
     font-weight: normal;
-    font-size: 16px;
+    font-size: 24px;
     line-height: 14px;
 
     color: #000000;
