@@ -33,8 +33,8 @@ const InkCursor = ({ amount = 20, width = 26 }) => {
           ease: "circ.out"
         }, {
           duration: 0.3,
-          width: '68px',
-          height: '68px',
+          width: '75px',
+          height: '75px',
           ease: "circ.in"
         }, 0)
       })
