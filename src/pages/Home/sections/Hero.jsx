@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import gsap from 'gsap'
 
 import colors from '../../../utils/colors'
+import media from '../../../utils/media'
 
 // import HeroText from '../components/HeroText'
 // import HeroText from '../components/HeroText2'
@@ -54,6 +55,13 @@ const Wrapper = styled.section`
   padding-bottom: 22.917vw;
   padding-left: 6.944vw;
   padding-right: 6.944vw;
+
+  ${media.mobile} {
+    padding-top: 25.067vw;
+    padding-bottom: 105.333vw;
+    padding-left: 5.333vw;
+    padding-right: 5.333vw;
+  }
 `
 
 const Title = styled.h1`
@@ -79,4 +87,10 @@ const LargeText = styled.span`
   font-size: 41.667vw;
   right: 7.222vw;
   top: 35.972vw;
+
+  ${media.mobile} {
+    font-size: 52.533vw;
+    top: 173.067vw;
+    right: 0.533vw;
+  }
 `
