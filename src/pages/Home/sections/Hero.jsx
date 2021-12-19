@@ -1,19 +1,25 @@
-import React, { useRef, useEffect } from 'react'
+import React, { useRef, useEffect, useContext } from 'react'
 import styled from 'styled-components'
 import gsap from 'gsap'
 
+import { ScreenContext } from 'App'
+
 import colors from '../../../utils/colors'
-import media from '../../../utils/media'
+import media  from '../../../utils/media'
 
 // import HeroText from '../components/HeroText'
 // import HeroText from '../components/HeroText2'
 // import HeroText from '../components/HeroText3'
 // import HeroText from '../components/HeroText4'
-import HeroText from '../components/HeroText6'
+import HeroText       from '../components/HeroText6'
+import HeroTextMobile from '../components/HeroTextMobile'
+import InkBlob        from '../../../components/InkBlob'
 
 const Hero = () => {
   const titleRef = useRef(null)
   const dateRef = useRef(null)
+
+  const screen = useContext(ScreenContext)
 
   useEffect(() => {
     if (titleRef.current) {
@@ -37,8 +43,12 @@ const Hero = () => {
 
   return (
     <Wrapper data-scroll-section id="home-hero">
-      <Title ref={titleRef}><HeroText/></Title>
+      <Title ref={titleRef}>
+        {(screen.desktop || screen.fullWidth) && <HeroText/>}
+        {(screen.tablet || screen.mobile) && <HeroTextMobile/>}
+      </Title>
       <LargeText ref={dateRef}>©1993</LargeText>
+      <InkBlob/>
     </Wrapper>
   )
 }
@@ -91,6 +101,6 @@ const LargeText = styled.span`
   ${media.mobile} {
     font-size: 52.533vw;
     top: 173.067vw;
-    right: 0.533vw;
+    right: -7.733vw;
   }
 `

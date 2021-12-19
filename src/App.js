@@ -16,17 +16,36 @@ function App() {
   const wrapperRef = useRef(null)
 
   const [cursorType, setCursorType] = useState(null)
-  const [fw, setFw] = useState(false)
-  const [d, setD] = useState(false)
-  const [t, setT] = useState(false)
-  const [m, setM] = useState(false)
+  const [screen, setScreen] = useState({
+    fullWidth: false,
+    desktop: false,
+    tablet: false,
+    mobile: false
+  })
  
   useEffect(() => {
-    
+    const updateScreen = () => {
+      let { innerWidth } = window
+
+      setScreen({
+        fullWidth: innerWidth > desktop,
+        desktop: innerWidth <= desktop && innerWidth > tablet,
+        tablet: innerWidth <= tablet && innerWidth > mobile,
+        mobile: innerWidth <= mobile
+      })
+    }
+
+    updateScreen()
+
+    window.addEventListener('resize', updateScreen)
+
+    return () => {
+      window.removeEventListener('resize', updateScreen)
+    }
   }, [])
 
   return (
-    <ScreenContext.Provider value={{fullWidth: fw, desktop: d, tablet: t, mobile: m}}>
+    <ScreenContext.Provider value={screen}>
       <CursorContext.Provider value={{cursorType, setCursorType}}>
         <Wrapper 
           data-scroll-container 
@@ -34,11 +53,8 @@ function App() {
           ref={wrapperRef}
         >
           <Scroll/>
-
-          {/* <Cursor/> */}
-          <InkCursor/>
-        
-          
+          {(screen.fullWidth || screen.desktop) && <InkCursor/>}
+      
           <Switch>
 
             <Route exact path="/">
