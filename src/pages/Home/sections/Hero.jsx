@@ -78,6 +78,10 @@ const Title = styled.h1`
   // background-color: white;
   position: relative;
   z-index: 2;
+
+  ${media.mobile} {
+    left: -4vw;
+  }
 `
 
 const LargeText = styled.span`

@@ -4,6 +4,8 @@ import styled from 'styled-components'
 import gsap from 'gsap'
 
 import colors from '../../../utils/colors'
+import media from 'utils/media'
+import { useMedia } from 'utils/hooks'
 
 const Project = ({ title, type, href }) => {
   const titleRef = useRef(null)
@@ -35,6 +37,8 @@ const Project = ({ title, type, href }) => {
     window.open(href, "_blank")
   }
 
+  const textStrokeFrom = useMedia("1px #AFB1B0", "1px #AFB1B0", "1px #AFB1B0", "0.5px #AFB1B0")
+
   useEffect(() => {
     const tl = gsap.timeline({
       paused: true
@@ -42,7 +46,7 @@ const Project = ({ title, type, href }) => {
 
     tl.fromTo(titleRef.current, {
       background: 'unset',
-      textStroke: '1px #AFB1B0',
+      textStroke: textStrokeFrom,
       textFillColor: 'unset'
     }, {
       duration: 0.5,
@@ -85,6 +89,12 @@ const ProjectWrapper = styled.div`
   padding-left: 18.194vw;
   padding-right: 6.25vw;
   margin-bottom: 8.75vw;
+
+  ${media.mobile} {
+    padding-left: 5.333vw;
+    padding-right: 5.333vw;
+    margin-bottom: 25px;
+  }
 `
 
 const Title = styled.h2`
@@ -100,6 +110,12 @@ const Title = styled.h2`
 
   font-size: 12.5vw;
   margin-bottom: 2.222vw;
+
+  ${media.mobile} {
+    margin-bottom: 2.133vw;
+    font-size: 19.2vw;
+    -webkit-text-stroke: 0.5px #AFB1B0;
+  }
 `
 
 const Type = styled.span`
@@ -114,6 +130,14 @@ const Type = styled.span`
   
   font-size: 1.667vw;
   margin-bottom: 3.472vw;
+
+  ${media.mobile} {
+    font-size: 4.267vw;
+    margin-bottom: 5.333vw;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 150%;
+  }
 
   span {
     color: ${colors.green};

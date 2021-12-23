@@ -54,7 +54,7 @@ const HeroText = () => {
   }, [outlineComplete])
 
   return (
-    <SVG ref={svgRef} width="345" height="464" viewBox="0 0 345 464" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <SVG ref={svgRef} viewBox="0 0 345 464" fill="none" xmlns="http://www.w3.org/2000/svg">
 
       <path ref={pathRef} d={`
         M38.928 2.89599H30.768L33.072 11.824L18.288 70H27.696C27.216 66.928 26.928 61.936 27.024 56.08H44.304L47.856 70H55.92L38.928 2.89599Z
