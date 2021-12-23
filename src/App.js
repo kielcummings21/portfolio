@@ -13,7 +13,6 @@ export const CursorContext = createContext(null)
 export const ScreenContext = createContext({fullWidth: false, desktop: false, tablet: false, mobile: false})
 
 function App() {
-  const wrapperRef = useRef(null)
 
   const [cursorType, setCursorType] = useState(null)
   const [screen, setScreen] = useState({
@@ -33,8 +32,6 @@ function App() {
         tablet: innerWidth <= tablet && innerWidth > mobile,
         mobile: innerWidth <= mobile
       })
-
-      window.locomotiveScroll.update()
     }
 
     updateScreen()
@@ -50,20 +47,10 @@ function App() {
     <>
       <ScreenContext.Provider value={screen}>
         <CursorContext.Provider value={{cursorType, setCursorType}}>
-          <Wrapper 
-            data-scroll-container 
-            className="smooth-scroll"
-            ref={wrapperRef}
-          >
+          <Wrapper className="smooth-scroll">
             {(screen.fullWidth || screen.desktop) && <InkCursor/>}
         
-            <Switch>
-
-              <Route exact path="/">
-                <Home/>
-              </Route>
-
-            </Switch>
+            <Home/>
 
           </Wrapper>
         </CursorContext.Provider>
@@ -80,4 +67,5 @@ const Wrapper = styled.div`
   width: 100%;
   background-color: ${colors.black};
   cursor: none;
+  overflow: hidden;
 `

@@ -80,21 +80,22 @@ const Project = ({ title, type, href }) => {
 export default Project
 
 const ProjectWrapper = styled.div`
-  box-sizing: border-box;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
 
+  height: 18.611vw;
   padding-left: 18.194vw;
   padding-right: 6.25vw;
   margin-bottom: 8.75vw;
 
   ${media.mobile} {
+    height: 38.133vw;
     padding-left: 5.333vw;
     padding-right: 5.333vw;
-    margin-bottom: 25px;
+    margin-bottom: 6.667vw;
   }
 `
 
@@ -110,7 +111,7 @@ const Title = styled.h2`
 	-webkit-text-fill-color: transparent;
 
   font-size: 12.5vw;
-  margin-bottom: 2.222vw;
+  margin-bottom: 2.083vw;
 
   ${media.mobile} {
     margin-bottom: 2.133vw;
@@ -153,6 +154,7 @@ const HR = styled.hr`
   width: 100%;
   border: none;
   background: linear-gradient(to right, #AFB1B0 -0.74%, rgba(175, 177, 176, 0) 100%);
-  
+  margin: 0px;
+
   height: 0.139vw;
 `

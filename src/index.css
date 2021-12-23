@@ -1,11 +1,17 @@
 @font-face {
   font-family: "Lazzer TRIAL";
-  src: url('./fonts/._LazzerTRIAL-Thin.otf');
+  src: url(./fonts/._LazzerTRIAL-Thin.otf) format('opentype');
+  font-display: swap;
 }
 
 @font-face {
   font-family: Arras;
-  src: url(./fonts/Arras.otf);
+  src: url(./fonts/Arras.otf) format('opentype');
+  font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {

@@ -7,7 +7,7 @@ import LogoSVG from '../images/logo.svg'
 
 const Nav = () => {
   return (
-    <Wrapper  data-scroll-sticky data-scroll-target="#home-hero">
+    <Wrapper  data-scroll-sticky data-scroll-target=".smooth-scroll">
       <Logo src={LogoSVG} alt="Kiel Cummings"/> 
       <Links>
         {/* <StyledLink to="/about">About</StyledLink>
@@ -26,11 +26,11 @@ const Wrapper = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: fixed;
   z-index: 9;
   top: 0;
   left: 0;
-
+  position: absolute;
+  
   height: 7.222vw;
   padding-left: 6.875vw;
   padding-right: 6.875vw;

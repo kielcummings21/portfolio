@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import colors from '../utils/colors'
+import media from 'utils/media'
 
 const CircleSVG = ({ color, index }) => {
 
@@ -47,8 +48,11 @@ const Footer = () => {
 export default Footer
 
 const Wrapper = styled.footer`
+  width: 100%;
   padding-left: 1.806vw;
   padding-right: 1.806vw;
+  height: 17.639vw;
+  overflow: hidden;
 `
 
 const LargeName = styled.span`

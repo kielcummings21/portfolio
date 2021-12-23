@@ -42,7 +42,7 @@ const Hero = () => {
   }, [dateRef])
 
   return (
-    <Wrapper data-scroll-section id="home-hero">
+    <Wrapper data-scroll-section>
       <Title ref={titleRef}>
         {(screen.desktop || screen.fullWidth) && <HeroText/>}
         {(screen.tablet || screen.mobile) && <HeroTextMobile/>}
@@ -67,6 +67,7 @@ const Wrapper = styled.section`
   padding-right: 6.944vw;
 
   ${media.mobile} {
+    height: 230.667vw;
     padding-top: 25.067vw;
     padding-bottom: 105.333vw;
     padding-left: 5.333vw;

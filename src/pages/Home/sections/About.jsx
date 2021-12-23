@@ -45,6 +45,7 @@ const Wrapper = styled.section`
   padding-left: 18.333vw;
 
   ${media.mobile} {
+    height: 137.333vw;
     padding-top: 53.333vw;
     padding-left: 5.333vw;
   }
@@ -86,7 +87,6 @@ const Title = styled.h3`
   ${media.mobile} {
     font-size: 9.067vw;
     line-height: 100%;
-    margin-bottom: 20vw;
   }
 `
 
