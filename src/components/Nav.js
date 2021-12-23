@@ -1,8 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-// import { Link } from 'react-router-dom'
 
-// import colors from '../utils/colors'
+import media from '../utils/media'
 
 import LogoSVG from '../images/logo.svg'
 
@@ -34,12 +33,23 @@ const Wrapper = styled.header`
 
   height: 7.222vw;
   padding-left: 6.875vw;
-  padding-right: 6.875vw
+  padding-right: 6.875vw;
+
+  ${media.mobile} {
+    height: 13.333vw;
+    padding-left: 5.333vw;
+    padding-right: 5.333vw;
+  }
 `
 
 const Logo = styled.img`
   height: 2.431vw;
   width: 8.958vw;
+
+  ${media.mobile} {
+    height: 5.6vw;
+    width: 20.8vw;
+  }
 `
 
 const Links = styled.div`

@@ -1,12 +1,17 @@
 import styled from 'styled-components'
 
+import media from 'utils/media'
+import { useMedia } from 'utils/hooks'
+
 import Project from '../components/Project'
 
 const Projects = () => {
+
+  const lemondTitle = useMedia("LeMond Bikes", "LeMond Bikes", "LeMond Bikes", "LeMond")
   
   return (
     <Wrapper 
-      data-scroll-section 
+      
     >
 
       <Project
@@ -16,7 +21,7 @@ const Projects = () => {
       />
 
       <Project
-        title="LeMond Bikes"
+        title={lemondTitle}
         type="Art Direction, Branding"
         href="https://lemond.com"
       />
@@ -48,4 +53,8 @@ const Wrapper = styled.section`
   justify-content: flex-start;
 
   padding-top: 10.417vw;
+
+  ${media.mobile} {
+
+  }
 `

@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { CursorContext } from '../../../App'
 
 import colors from '../../../utils/colors'
+import media from 'utils/media'
 
 import PortraitPNG from '../../../images/portrait.png'
 
@@ -42,6 +43,11 @@ const Wrapper = styled.section`
 
   padding-top: 7.639vw;
   padding-left: 18.333vw;
+
+  ${media.mobile} {
+    padding-top: 53.333vw;
+    padding-left: 5.333vw;
+  }
 `
 
 const SubTitle = styled.span`
@@ -56,6 +62,11 @@ const SubTitle = styled.span`
 
   font-size: 2.5vw;
   margin-bottom: 2.778vw;
+
+  ${media.mobile} {
+    font-size: 4.8vw;
+    margin-bottom: 5.333vw;
+  }
 `
 
 const Title = styled.h3`
@@ -65,20 +76,36 @@ const Title = styled.h3`
   font-family: Arras;
   font-style: normal;
   font-weight: normal;
-  line-height: 90%;
   letter-spacing: -0.02em;
   white-space: pre-wrap;
-
+  
+  line-height: 90%;
   font-size: 6.667vw;
   margin-bottom: 1.597vw;
+
+  ${media.mobile} {
+    font-size: 9.067vw;
+    line-height: 100%;
+    margin-bottom: 20vw;
+  }
 `
 
 const Img = styled.img`
   position: absolute;
-  top: 0;
   z-index: 1;
-
+  border: 1px solid #575757;
+  border-radius: 50%;
+  
+  top: 0;
   left: -11.319vw;
   width: 34.861vw;
   height: 34.861vw;
+
+  ${media.mobile} {
+    width: 51.2vw;
+    height: 51.2vw;
+    left: unset;
+    right: -13.333vw;
+    top: 20.267vw;
+  }
 `
