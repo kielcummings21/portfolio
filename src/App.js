@@ -33,6 +33,8 @@ function App() {
         tablet: innerWidth <= tablet && innerWidth > mobile,
         mobile: innerWidth <= mobile
       })
+
+      window.locomotiveScroll.update()
     }
 
     updateScreen()
@@ -45,27 +47,29 @@ function App() {
   }, [])
 
   return (
-    <ScreenContext.Provider value={screen}>
-      <CursorContext.Provider value={{cursorType, setCursorType}}>
-        <Wrapper 
-          data-scroll-container 
-          className="smooth-scroll"
-          ref={wrapperRef}
-        >
-          <Scroll/>
-          {(screen.fullWidth || screen.desktop) && <InkCursor/>}
-      
-          <Switch>
+    <>
+      <ScreenContext.Provider value={screen}>
+        <CursorContext.Provider value={{cursorType, setCursorType}}>
+          <Wrapper 
+            data-scroll-container 
+            className="smooth-scroll"
+            ref={wrapperRef}
+          >
+            {(screen.fullWidth || screen.desktop) && <InkCursor/>}
+        
+            <Switch>
 
-            <Route exact path="/">
-              <Home/>
-            </Route>
+              <Route exact path="/">
+                <Home/>
+              </Route>
 
-          </Switch>
+            </Switch>
 
-        </Wrapper>
-      </CursorContext.Provider>
-    </ScreenContext.Provider>
+          </Wrapper>
+        </CursorContext.Provider>
+      </ScreenContext.Provider>
+      <Scroll/>
+    </>
   );
 }
 

@@ -11,7 +11,7 @@ const Projects = () => {
   
   return (
     <Wrapper 
-      data-scroll-section 
+      
     >
 
       <Project
