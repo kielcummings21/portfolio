@@ -65,7 +65,6 @@ const Project = ({ title, type, href }) => {
       onMouseEnter={handleMouseEnter} 
       onMouseLeave={handleMouseLeave}
       onClick={handleOnClick}
-      data-scroll-section
     >
       <Type>
         <span>Project Type:&nbsp;</span>

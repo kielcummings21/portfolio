@@ -21,7 +21,6 @@ const About = () => {
 
   return (
     <Wrapper 
-      data-scroll-section
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
