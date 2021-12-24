@@ -40,7 +40,7 @@ const Footer = () => {
   })
 
   return (
-    <Wrapper >
+    <Wrapper data-scroll-section>
       <LargeName>Kiel Cummings</LargeName>
       <Links>
         {links}

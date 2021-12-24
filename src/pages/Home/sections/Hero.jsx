@@ -42,7 +42,7 @@ const Hero = () => {
   }, [dateRef])
 
   return (
-    <Wrapper>
+    <Wrapper data-scroll-section>
       <Title ref={titleRef}>
         {(screen.desktop || screen.fullWidth) && <HeroText/>}
         {(screen.tablet || screen.mobile) && <HeroTextMobile/>}

@@ -10,7 +10,7 @@ const Projects = () => {
   const lemondTitle = useMedia("LeMond Bikes", "LeMond Bikes", "LeMond Bikes", "LeMond")
   
   return (
-    <Wrapper>
+    <Wrapper data-scroll-section>
 
       <Project
         title="Source7"

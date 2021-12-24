@@ -23,6 +23,7 @@ const About = () => {
     <Wrapper 
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      data-scroll-section
     >
       <Img src={PortraitPNG}/>
   
