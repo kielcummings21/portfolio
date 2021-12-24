@@ -47,7 +47,7 @@ function App() {
     <>
       <ScreenContext.Provider value={screen}>
         <CursorContext.Provider value={{cursorType, setCursorType}}>
-          <Wrapper className="smooth-scroll">
+          <Wrapper data-scroll-container className="smooth-scroll">
             {(screen.fullWidth || screen.desktop) && <InkCursor/>}
         
             <Home/>
