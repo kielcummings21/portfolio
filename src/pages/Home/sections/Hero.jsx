@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useContext } from 'react'
 import styled from 'styled-components'
 import gsap from 'gsap'
 
-import { ScreenContext } from 'App'
+import { ScreenContext } from '../../../App'
 
 import colors from '../../../utils/colors'
 import media  from '../../../utils/media'

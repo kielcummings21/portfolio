@@ -109,7 +109,7 @@ const Title = styled.h2`
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 
-  font-size: 12.5vw;
+  font-size: 11vw;
   margin-bottom: 2.083vw;
 
   ${media.mobile} {

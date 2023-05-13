@@ -13,6 +13,18 @@ const Projects = () => {
     <Wrapper data-scroll-section>
 
       <Project
+        title="Antisocial Solutions"
+        type="Creative Direction, UI, UX"
+        href="https://antisocialsolutions.com"
+      />
+
+      <Project
+        title="Jasper.Ai"
+        type="Creative Direction, UI, UX"
+        href="https://jasper.ai"
+      />
+
+      <Project
         title="Source7"
         type="Art Direction, Branding, UI, UX"
         href="https://source7.com"
@@ -22,12 +34,6 @@ const Projects = () => {
         title={lemondTitle}
         type="Art Direction, Branding"
         href="https://lemond.com"
-      />
-
-      <Project
-        title="Flyreel"
-        type="Art Direction, Branding, UI, UX"
-        href="https://flyreel.co"
       />
 
       <Project
