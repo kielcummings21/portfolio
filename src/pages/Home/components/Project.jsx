@@ -91,10 +91,10 @@ const ProjectWrapper = styled.div`
   margin-bottom: 8.75vw;
 
   ${media.mobile} {
-    height: 38.133vw;
     padding-left: 5.333vw;
     padding-right: 5.333vw;
     margin-bottom: 6.667vw;
+    height: auto;
   }
 `
 
